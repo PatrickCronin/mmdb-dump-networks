@@ -53,9 +53,9 @@ changelog:
   skip: true
 
 nfpms:
-  - id: 'routesum'
+  - id: 'mmdb-dump-networks'
     builds:
-      - 'routesum'
+      - 'mmdb-dump-networks'
     homepage: 'https://github.com/PatrickCronin/mmdb-dump-networks'
     maintainer: 'Patrick Cronin <patrick@gwana.co>'
     description: 'Print every network in an MMDB to STDOUT.'
@@ -64,7 +64,10 @@ nfpms:
       - 'deb'
       - 'rpm'
     bindir: '/usr/bin'
-    files:
-      'CHANGELOG.md': '/usr/share/doc/mmdb-dump-networks/CHANGELOG.md'
-      'LICENSE.md': '/usr/share/doc/mmdb-dump-networks/LICENSE.md'
-      'README.md': '/usr/share/doc/mmdb-dump-networks/README.md'
+    contents:
+      - src: 'CHANGELOG.md'
+        dst: '/usr/share/doc/mmdb-dump-networks/CHANGELOG.md'
+      - src: 'LICENSE.md'
+        dst: '/usr/share/doc/mmdb-dump-networks/LICENSE.md'
+      - src: 'README.md'
+        dst: '/usr/share/doc/mmdb-dump-networks/README.md'
