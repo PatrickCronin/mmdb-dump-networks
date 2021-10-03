@@ -22,7 +22,7 @@ func deepestStackTracer(err error) stackTracer {
 
 	var dst stackTracer
 	for err != nil {
-		if st, ok := err.(stackTracer); ok {
+		if st, ok := err.(stackTracer); ok { //nolint: errorlint
 			dst = st
 		}
 		err = errors.Unwrap(err)
