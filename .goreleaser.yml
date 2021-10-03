@@ -1,0 +1,70 @@
+project_name: 'mmdb-dump-networks'
+
+before:
+  hooks:
+    - 'go mod download'
+    - 'go mod tidy'
+
+builds:
+  - id: 'mmdb-dump-networks'
+    main: './cmd/mmdb-dump-networks'
+    binary: 'mmdb-dump-networks'
+    goarch:
+      - '386'
+      - 'amd64'
+      - 'arm64'
+    goos:
+      - 'darwin'
+      - 'linux'
+      - 'windows'
+    ignore:
+      - goos: 'darwin'
+        goarch: '386'
+      - goos: 'linux'
+        goarch: 'arm64'
+      - goos: 'windows'
+        goarch: 'arm64'
+
+archives:
+  - id: 'mmdb-dump-networks'
+    builds:
+      - 'mmdb-dump-networks'
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    replacements:
+      amd64: x86-64
+      386: 'i386'
+      darwin: 'macOS'
+    wrap_in_directory: true
+    files:
+      - 'CHANGELOG.md'
+      - 'LICENSE.md'
+      - 'README.md'
+
+checksum:
+  name_template: 'checksums.txt'
+
+snapshot:
+  name_template: "{{ .Tag }}-next"
+
+changelog:
+  skip: true
+
+nfpms:
+  - id: 'routesum'
+    builds:
+      - 'routesum'
+    homepage: 'https://github.com/PatrickCronin/mmdb-dump-networks'
+    maintainer: 'Patrick Cronin <patrick@gwana.co>'
+    description: 'Print every network in an MMDB to STDOUT.'
+    license: 'MIT'
+    formats:
+      - 'deb'
+      - 'rpm'
+    bindir: '/usr/bin'
+    files:
+      'CHANGELOG.md': '/usr/share/doc/mmdb-dump-networks/CHANGELOG.md'
+      'LICENSE.md': '/usr/share/doc/mmdb-dump-networks/LICENSE.md'
+      'README.md': '/usr/share/doc/mmdb-dump-networks/README.md'
