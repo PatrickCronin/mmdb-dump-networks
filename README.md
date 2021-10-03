@@ -87,11 +87,11 @@ environment variable, which defaults to `$GOPATH/bin` or `$HOME/go/bin` if the
 # Reporting Bugs and Issues
 
 Bugs and other issues can be reported by filing an issue on our [GitHub issue
-tracker](https://github.com/PatrickCronin/routesum/issues).
+tracker](https://github.com/PatrickCronin/mmdb-dump-networks/issues).
 
 # Copyright and License
 
 This software is Copyright (c) 2021 by Patrick Cronin.
 
 This is free software, licensed under the terms of the [MIT
-License](https://github.com/PatrickCronin/routesum/LICENSE.md).
+License](https://github.com/PatrickCronin/mmdb-dump-networks/LICENSE.md).
