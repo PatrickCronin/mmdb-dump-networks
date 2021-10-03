@@ -2,6 +2,12 @@
 
 `mmdb-dump-networks` - print every network in an MMDB to STDOUT
 
+![Build](https://github.com/PatrickCronin/mmdb-dump-networks/workflows/Build/badge.svg)
+![golangci-lint](https://github.com/PatrickCronin/mmdb-dump-networks/workflows/golangci-lint/badge.svg)
+[![go report](https://goreportcard.com/badge/github.com/PatrickCronin/mmdb-dump-networks)](https://goreportcard.com/badge/github.com/PatrickCronin/mmdb-dump-networks)
+[![Coverage
+Status](https://coveralls.io/repos/github/PatrickCronin/mmdb-dump-networks/badge.svg)](https://coveralls.io/github/PatrickCronin/mmdb-dump-networks)
+
 * [Project Description](#project-description)
 * [Usage](#usage)
 * [Description](#description)
