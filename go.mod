@@ -1,4 +1,4 @@
-module github.com/PatrickCronin/dump-mmdb-networks
+module github.com/PatrickCronin/mmdb-dump-networks
 
 go 1.17
 
